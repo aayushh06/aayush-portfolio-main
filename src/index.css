@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Portfolio Design System - Navy + Sky Blue Theme */
+    --background: 0 0% 100%;
+    --foreground: 240 71% 16%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 71% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 71% 16%;
+
+    --primary: 240 71% 16%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 240 71% 16%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 14% 46%;
+
+    --accent: 196 90% 70%;
+    --accent-foreground: 240 71% 16%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 14% 91%;
+    --input: 220 14% 91%;
+    --ring: 196 90% 70%;
+
+    --radius: 0.75rem;
+    
+    /* Custom Portfolio Tokens */
+    --navy: 240 71% 16%;
+    --sky: 196 90% 70%;
+    --sky-light: 196 90% 85%;
+    --text-muted: 220 14% 46%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(240 71% 16%) 0%, hsl(240 71% 25%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(196 90% 70%) 0%, hsl(196 90% 60%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 14% 98%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px hsl(240 71% 16% / 0.06);
+    --shadow-md: 0 6px 18px hsl(240 71% 16% / 0.08);
+    --shadow-lg: 0 12px 32px hsl(240 71% 16% / 0.12);
+    --shadow-glow: 0 0 24px hsl(196 90% 70% / 0.3);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 240 71% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 71% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 71% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 71% 16%;
+
+    --secondary: 240 60% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 60% 20%;
+    --muted-foreground: 220 14% 70%;
+
+    --accent: 196 90% 70%;
+    --accent-foreground: 240 71% 16%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 60% 20%;
+    --input: 240 60% 20%;
+    --ring: 196 90% 70%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(240 71% 8%) 0%, hsl(240 71% 16%) 100%);
+    --shadow-md: 0 6px 18px hsl(0 0% 0% / 0.3);
+    --shadow-lg: 0 12px 32px hsl(0 0% 0% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-['Poppins',sans-serif] antialiased;
+    font-feature-settings: "kern" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 py-16 md:py-24;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1.5;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .card-hover:hover {
+    box-shadow: var(--shadow-md);
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:opacity-90;
+    transition: var(--transition-smooth);
+  }
+  
+  .btn-accent {
+    @apply bg-accent text-accent-foreground hover:opacity-90;
+    transition: var(--transition-smooth);
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-accent);
+  }
+}
