@@ -61,6 +61,12 @@ const About = () => {
           
           <Button className="btn-accent gap-2 shadow-lg hover:shadow-xl transition-shadow">
             <Download size={18} />
+            <a
+    href="https://drive.google.com/file/d/1rluGS4dNNhcivd5pe9HsInQJP3-s6jGh/view?usp=sharing" // replace with your actual resume link
+    target="_blank"
+    rel="noopener noreferrer"
+    download="Aayush_Sharma_Resume.pdf"
+  >
             Download Resume
           </Button>
         </div>
