@@ -1,6 +1,6 @@
-# 👋 Hi, I'm Aayush Sharma
+# Hii , I'm Aayush Sharma
 
-🎯 **Data Analyst | AI/ML Developer | Tech Enthusiast**
+**Data Analyst | AI/ML Developer | Tech Enthusiast**
 
 Welcome to my GitHub!  
 I enjoy building intelligent systems that turn data into insight and automation into impact.
@@ -37,8 +37,6 @@ I enjoy building intelligent systems that turn data into insight and automation 
 ## 🌐 Connect With Me
 📧 [aayush.as2311@gmail.com](mailto:aayush.as2311@gmail.com)  
 💼 [LinkedIn](https://linkedin.com/in/aayushhsharma)  
-💻 [GitHub](https://github.com/aayushh06)
-
 ---
 
 ⭐ *If you find my work interesting, consider following or starring a repo — it helps me stay motivated to build more!*
